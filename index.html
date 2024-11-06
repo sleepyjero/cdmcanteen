@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colegio de Montalban Canteen</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1>COLEGIO DE MONTALBAN CANTEEN</h1>
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA..." alt="Colegio de Montalban Logo" class="logo">
+    </div>
+
+    <!-- Menu page for selecting the first food item -->
+    <div class="menu-container" id="menu-container">
+        <div class="food-item" onclick="selectFood('Sisig w/ Rice')">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA..." alt="Sisig w/ Rice">
+            <h2>Sisig w/ Rice</h2>
+            <p>55 PHP</p>
+        </div>
+        <div class="food-item" onclick="selectFood('Chicken Tender w/ Rice')">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA..." alt="Chicken Tender w/ Rice">
+            <h2>Chicken Tender w/ Rice</h2>
+            <p>50 PHP</p>
+        </div>
+        <div class="food-item" onclick="selectFood('Chaofan')">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA..." alt="Chaofan">
+            <h2>Chaofan</h2>
+            <p>40 PHP</p>
+        </div>
+        <div class="food-item" onclick="selectFood('Siomai Rice')">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA..." alt="Siomai Rice">
+            <h2>Siomai Rice</h2>
+            <p>35 PHP</p>
+        </div>
+        <div class="food-item" onclick="selectFood('Siopao')">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA..." alt="Siopao">
+            <h2>Siopao</h2>
+            <p>30 PHP</p>
+        </div>
+        <div class="food-item" onclick="selectFood('French Fries')">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA..." alt="French Fries">
+            <h2>French Fries</h2>
+            <p>Large: 30 PHP</p>
+            <p>Medium: 20 PHP</p>
+        </div>
+        <div class="food-item" onclick="selectFood('Fried Noodles')">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA..." alt="Fried Noodles">
+            <h2>Fried Noodles</h2>
+            <p>25 PHP</p>
+        </div>
+        <div class="food-item" onclick="selectFood('Hotdog Sandwich')">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA..." alt="Hotdog Sandwich">
+            <h2>Hotdog Sandwich</h2>
+            <p>25 PHP</p>
+        </div>
+        <div class="food-item" onclick="selectFood('Burger')">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA..." alt="Burger">
+            <h2>Burger</h2>
+            <p>20 PHP</p>
+        </div>
+        <div class="food-item" onclick="selectFood('Palamig')">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA..." alt="Palamig">
+            <h2>Palamig</h2>
+            <p>Large: 10 PHP</p>
+            <p>Medium: 5 PHP</p>
+        </div>
+    </div>
+
+    <!-- Order Confirmation Page (hidden initially) -->
+    <div id="order-form" style="display: none;">
+        <!-- Yellow Note for Order Summary -->
+        <div class="yellow-note" id="order-summary">
+            <h3>Order Summary</h3>
+            <ul id="selected-food-list"></ul>
+
+            <button onclick="goBackToMenu()">Add More Items</button>
+        </div>
+
+        <!-- Yellow Note for room and building -->
+        <div class="yellow-note">
+            <label for="room">Room:</label>
+            <input type="text" id="room" placeholder="Enter room number">
+            <br>
+            <label for="building">Building:</label>
+            <input type="text" id="building" placeholder="Enter building name">
+            <br>
+            <button id="place-order" onclick="placeOrder()">Place Order</button>
+        </div>
+
+        <p id="thank-you-message" style="display: none;">Thank you for ordering! Please prepare the payment. Your order will arrive soon.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
